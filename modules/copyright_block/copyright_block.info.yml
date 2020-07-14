@@ -1,0 +1,5 @@
+name: 'Copyright Block'
+type: module
+description: 'This module provides a themable custom block plugin with a dynamic year value.'
+core: 8.x
+package: 'Custom'
