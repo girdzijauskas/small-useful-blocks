@@ -1,0 +1,25 @@
+{#
+/**
+* @file
+* Default implementation to display the contact us block with a phone and an
+* email.
+*
+* Available variables:
+* - phone_icon: configurable class
+* - phone_link: generated link
+* - email_icon: configurable class
+* - email_link: generated link
+*
+* @see ContactUsBlock.php
+*
+*/
+#}
+
+<div{{ attributes }}>
+    <span>
+      <i class="fal {{ phone_icon }}"></i> <span>{{ phone_link }}</span>
+    </span>
+    <span>
+      <i class="fal {{ email_icon }}"></i> <span>{{ email_link }}</span>
+    </span>
+</div>

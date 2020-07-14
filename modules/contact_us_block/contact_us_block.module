@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains contact_us_block.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function contact_us_block_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the contact_us_block module.
+    case 'help.page.contact_us_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provides a custom block with a phone and e-mail links.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function contact_us_block_theme() {
+  return [
+    'contact_us_block' => [
+      'variables' => [
+        'phone_icon' => NULL,
+        'phone_link' => NULL,
+        'email_icon' => NULL,
+        'email_link' => NULL,
+      ],
+    ],
+  ];
+}
+
