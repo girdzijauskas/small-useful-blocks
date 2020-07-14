@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains hamburgers_block.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hamburgers_block_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the hamburgers_block module.
+    case 'help.page.hamburgers_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provides a custom block with the ability to pick a hamburger icon for responsive menus.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hamburgers_block_theme() {
+  return [
+    'hamburger_block' => [
+      'variables' => [
+        'hamburger_icon' => NULL,
+      ],
+    ],
+  ];
+}

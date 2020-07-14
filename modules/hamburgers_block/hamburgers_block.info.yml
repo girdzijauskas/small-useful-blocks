@@ -1,0 +1,5 @@
+name: 'Hamburgers Block'
+type: module
+description: 'This module provides a custom block with the ability to pick a hamburger icon for responsive menus.'
+core: 8.x
+package: 'Custom'
