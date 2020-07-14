@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains social_media_block.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function social_media_block_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the social_media_block module.
+    case 'help.page.social_media_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provides a social media block with configurable icons and URL&#039;&#039;s.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function social_media_block_theme() {
+  return [
+    'social_media_block' => [
+      'variables' => [
+        'linkedin_link' => NULL,
+        'twitter_link' => NULL,
+        'facebook_link' => NULL,
+        'youtube_link' => NULL,
+      ],
+    ],
+    'social_media_link' => [
+      'variables' => [
+        'icon' => NULL,
+        'uri' => NULL,
+        'title' => NULL,
+      ],
+    ],
+  ];
+}

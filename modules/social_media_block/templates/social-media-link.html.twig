@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation to show an individual Social Media Link.
+ *
+ * Available variables:
+ * - icon:  The configured icon class
+ * - uri: the configured URL to generate a link with.
+ *
+ * @see SocialMediaBlock.php
+#}
+
+{% set title %}
+  {{ icon }}
+{% endset %}
+ 
+{{ link(title, uri, attributes)}}
